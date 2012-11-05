@@ -1,0 +1,15 @@
+﻿
+{namespace sp.ui}
+
+/**
+ * selector 选择框
+ * @param value
+ * @param isHand
+ */
+{template .bubble}
+	<div class="common_selectWrap">
+		<input type="text" class="common_ipt common_selectIpt" value="{$value}" {if $isHand==true}disabled{/if} />
+		<div class="common_selectBtn"></div>
+		<div class="clear"></div>
+	</div>
+{/template}

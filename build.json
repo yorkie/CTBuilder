@@ -1,0 +1,21 @@
+﻿{
+	"name": "soopu.net",
+	"version": "2.0",
+	
+	"appdir": "../../",
+	"buildMode": "debug",
+	"buildPathList": [
+		{
+			"description": "no description",
+			"from": "scripts/modules/templates/{*.soy}",
+			"to": "scripts/modules/templates/{*.js}",
+			"style": "skin/themes/1/{*.css}"
+		},
+		{
+			"description": "ui组件模版",
+			"from": "scripts/ui/templates/{*.soy}",
+			"to": "scripts/ui/templates/{*.js}",
+			"style": "skin/themes/1/ui/{*.css}"
+		}
+	]
+}
