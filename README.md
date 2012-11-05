@@ -14,12 +14,12 @@
 ### 那么,如何使用？
 Step1: 请确保你已经知道如何使用Closure Template并足够了解它。<br/>
 Step2: 配置你的build.json
-    {
-        "name": "你的应用或网站的名字",
-        "version" "版本号",
-        "appdir": "GTemplatesBuilder文件夹相对于你项目的文件(必需)",
-        "buildMode": "debug|release",
-        "buildPathList": [
+```{
+```     "name": "你的应用或网站的名字",
+```     "version" "版本号",
+```     "appdir": "GTemplatesBuilder文件夹相对于你项目的文件(必需)",
+```     "buildMode": "debug|release",
+```     "buildPathList": [
              {
                  "description": "...",
                  "from": "scripts/modules/templates/{*.soy}",
@@ -28,6 +28,7 @@ Step2: 配置你的build.json
              }
         ]
     }
+<br/>
 注意几点：
 1. buildMode默认是debug，使用简单的编译过程，若使用release除了编译外，还会对编译的文件使用Closure Compiler进一步的压缩，从而提高其运行速率与文件大小。<br/>
 2. 在buildPathList配置你需要编译的文件，每一个数组元素对应于一个package，其中from是你的模版文件(.soy)，to对应于你生成的js路径，他们的值都使用通配符来过滤其他文件，不过需要注意的是模版文件与js文件的文件名是相同的。description与style目前不是必需的配置选项。<br/>
