@@ -7,7 +7,6 @@
 fs.readFile("build.json", "utf8", function (err, data) {
     // configuration
     var buildCfg = JSON.parse(data.replace(/(\r|\n|\t|\s)/gi, ""));
-    var buildList = buildCfg.buildPathList;
     sendToHandler(buildCfg);
 });
 

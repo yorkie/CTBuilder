@@ -34,14 +34,6 @@ process.on("message", function (m) {
     });
 });
 
-
-function logs(msg) {
-    var dateNOW = new Date();
-    var content = dateNOW.getHours() + "：" + dateNOW.getMinutes() + ":" + msg;
-    var LOGName = dateNOW.getFullYear() + dateNOW.getMonth() + dateNOW.getDate();
-    fs.writeFileSync("scripts/build/logs/" + LOGName + ".log", content, "utf8");
-}
-
 function filterPath(path) {
     if (!path)
         return;
@@ -73,11 +65,17 @@ function sendSoyToJS(files, path) {
 
                 filenamesMap.put(filename);
                 cp.exec(command, function (error, stdout, stderr) {
-                    process.send("[200][" + filename + " Success!]");
+                    if (!stderr) {
+                        process.send("[200][" + filename + " Success!]");
+                    } else {
+                        console.log("[404][" + filename + " Failed!]");
+                        process.send(stderr);
+                    }
                     filenamesMap.remove(filename);
                     if (filenamesMap.length === 0) {
                         process.exit(0);
                     }
+
                 });
             }
             sendSoyToJS();
