@@ -1,27 +1,19 @@
 {
-	"name": "node-GTemplatesBuilder",
-	"title": "node-GTemplatesBuilder",
-	"description": "a tool for templating, Google Closure Template",
-	"version": "1.0.0",
-	"homepage": "https://github.com/yorkie/node-GTemplatesBuilder",
-	"author": {
-		"name": "Yrokie",
-		"url": "https://github.com/yorkie"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/yorkie/node-GTemplatesBuilder.git"
-	},
-	"bugs": {
-		"url": "https://github.com/yorkie/node-GTemplatesBuilder/issues"
-	},
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "https://github.com/yorkie/node-GTemplatesBuilder/blob/master/MIT-LICENSE.txt"
-		}
-	],
-	"dependencies": {},
-	"devDependencies": {},
-	"keywords": ["Google Closure Template", "Static Template", "Developing Tool"]
+  "name": "gtemplatesbuilder",
+  "version": "1.0.0",
+  "description": "a tool for templating by using google closure template.",
+  "main": "build.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yorkie/node-GTemplatesBuilder.git"
+  },
+  "author": "yorkie",
+  "license": "MIT",
+  "readmeFilename": "README.md"
 }
