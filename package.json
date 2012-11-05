@@ -1,6 +1,6 @@
 {
   "name": "gtemplatesbuilder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tool for templating by using google closure template.",
   "main": "build.js",
   "directories": {
