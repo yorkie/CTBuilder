@@ -9,6 +9,7 @@
 
 ### 什么是Closure Template
 正如其名，是一个前端模版，不过与jquery.tmpl或目前最快的artTemplate等动态模版库相比，它是一个不折不扣地快速模版库，因为它是静态的。它将模版文件在服务器端就编译成了模版函数，这些函数基于高效的"+="字符串操作。<br/>
+不过最能概括这个前端模版特色的还是其官方的一句解释：In contrast to traditional templating systems, in which you must create one monolithic template per page, you can think of Closure Templates as small components that you compose to form your user interface.<br/>
 更多关于Closure Template,请见其<a target="_blank" href="https://developers.google.com/closure/templates/">官网</a>
 
 ### 那么,如何使用？
