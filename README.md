@@ -14,6 +14,8 @@
 ### 那么,如何使用？
 Step1: 请确保你已经知道如何使用Closure Template并足够了解它。<br/>
 Step2: 配置你的build.json
+```adsdasd
+
 ```{
 ```     "name": "你的应用或网站的名字",
 ```     "version" "版本号",
