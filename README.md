@@ -31,6 +31,8 @@ Step2: 配置你的build.json
     }
 ```
 注意几点：
+```
 1. buildMode默认是debug，使用简单的编译过程，若使用release除了编译外，还会对编译的文件使用Closure Compiler进一步的压缩，从而提高其运行速率与文件大小。<br/>
-2. 在buildPathList配置你需要编译的文件，每一个数组元素对应于一个package，其中from是你的模版文件(.soy)，to对应于你生成的js路径，他们的值都使用通配符来过滤其他文件，不过需要注意的是模版文件与js文件的文件名是相同的。description与style目前不是必需的配置选项。<br/>
+2. 在buildPathList配置你需要编译的文件，每一个数组元素对应于一个package，其中from是你的模版文件(.soy)，to对应于你生成的js路径，他们的值都使用通配符来过滤其他文件，不过需要注意的是模版文件与js文件的文件名是相同的。description与style目前不是必需的配置选项。
+```
 Step3: node项目中的build.js，若遇到编译错误，都将会显示在cmd窗口中。
