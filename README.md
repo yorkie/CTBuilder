@@ -1,25 +1,25 @@
-# GTemplatesBuilder
+# node-views
 
-运行一下根目录下的build.js试试<br/>
+锟斤拷锟斤拷一锟铰革拷目录锟铰碉拷build.js锟斤拷锟斤拷<br/>
 
-### Yorkie同你讲
-这不是一个静态模版生成引擎<br/>
-这不是一个node框架<br/>
-其实GTemplatesBuilder是一个基于node开发的Closure Template的拓展工具，使你摆脱傻瓜式编译.soy的苦恼。
+### Yorkie同锟姐讲
+锟解不锟斤拷一锟斤拷锟斤拷态模锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷<br/>
+锟解不锟斤拷一锟斤拷node锟斤拷锟斤拷<br/>
+锟斤拷实GTemplatesBuilder锟斤拷一锟斤拷锟斤拷锟斤拷node锟斤拷锟斤拷锟斤拷Closure Template锟斤拷锟斤拷展锟斤拷锟竭ｏ拷使锟斤拷锟斤拷锟斤拷傻锟斤拷式锟斤拷锟斤拷.soy锟侥匡拷锟秸★拷
 
-### 什么是Closure Template
-正如其名，是一个前端模版，不过与jquery.tmpl或目前最快的artTemplate等动态模版库相比，它是一个不折不扣地快速模版库，因为它是静态的。它将模版文件在服务器端就编译成了模版函数，这些函数基于高效的"+="字符串操作。<br/>
-不过最能概括这个前端模版特色的还是其官方的一句解释：In contrast to traditional templating systems, in which you must create one monolithic template per page, you can think of Closure Templates as small components that you compose to form your user interface.<br/>
-更多关于Closure Template,请见其<a target="_blank" href="https://developers.google.com/closure/templates/">官网</a>
+### 什么锟斤拷Closure Template
+锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷一锟斤拷前锟斤拷模锟芥，锟斤拷锟斤拷锟斤拷jquery.tmpl锟斤拷目前锟斤拷锟斤拷锟斤拷artTemplate锟饺讹拷态模锟斤拷锟斤拷锟斤拷锟饺ｏ拷锟斤拷锟斤拷一锟斤拷锟斤拷锟桔诧拷锟桔地匡拷锟斤拷模锟斤拷锟解，锟斤拷为锟斤拷锟角撅拷态锟侥★拷锟斤拷锟斤拷模锟斤拷锟侥硷拷锟节凤拷锟斤拷锟斤拷锟剿就憋拷锟斤拷锟斤拷锟斤拷模锟芥函锟斤拷锟斤拷锟斤拷些锟斤拷锟斤拷锟斤拷锟节革拷效锟斤拷"+="锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷<br/>
+锟斤拷锟斤拷锟斤拷锟杰革拷锟斤拷锟斤拷锟斤拷前锟斤拷模锟斤拷锟斤拷色锟侥伙拷锟斤拷锟斤拷锟劫凤拷锟斤拷一锟斤拷锟斤拷锟酵ｏ拷In contrast to traditional templating systems, in which you must create one monolithic template per page, you can think of Closure Templates as small components that you compose to form your user interface.<br/>
+锟斤拷锟斤拷锟斤拷锟斤拷Closure Template,锟斤拷锟斤拷锟斤拷<a target="_blank" href="https://developers.google.com/closure/templates/">锟斤拷锟斤拷</a>
 
-### 那么,如何使用？
-Step1: 请确保你已经知道如何使用Closure Template并足够了解它。<br/>
-Step2: 配置你的build.json
+### 锟斤拷么,锟斤拷锟斤拷使锟矫ｏ拷
+Step1: 锟斤拷确锟斤拷锟斤拷锟窖撅拷知锟斤拷锟斤拷锟斤拷使锟斤拷Closure Template锟斤拷锟姐够锟剿斤拷锟斤拷锟斤拷<br/>
+Step2: 锟斤拷锟斤拷锟斤拷锟斤拷build.json
 ```
    {
-        "name": "你的应用或网站的名字",
-        "version" "版本号",
-        "appdir": "GTemplatesBuilder文件夹相对于你项目的文件(必需)",
+        "name": "锟斤拷锟斤拷应锟矫伙拷锟斤拷站锟斤拷锟斤拷锟斤拷",
+        "version" "锟芥本锟斤拷",
+        "appdir": "GTemplatesBuilder锟侥硷拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷目锟斤拷锟侥硷拷(锟斤拷锟斤拷)",
         "buildMode": "debug|release",
         "buildPathList": [
              {
@@ -31,12 +31,12 @@ Step2: 配置你的build.json
         ]
     }
 ```
-注意几点：
+注锟解几锟姐：
 ```
-1. buildMode默认是debug，使用简单的编译过程，若使用release除了编译外，还会对编译的文件使用Closure Compiler进一步的压缩，
-从而提高其运行速率与文件大小。<br/>
-2. 在buildPathList配置你需要编译的文件，每一个数组元素对应于一个package，其中from是你的模版文件(.soy)，to对应于你生成的
-js路径，他们的值都使用通配符来过滤其他文件，不过需要注意的是模版文件与js文件的文件名是相同的。description与style目前不
-是必需的配置选项。
+1. buildMode默锟斤拷锟斤拷debug锟斤拷使锟矫简单的憋拷锟斤拷锟斤拷锟教ｏ拷锟斤拷使锟斤拷release锟斤拷锟剿憋拷锟斤拷锟解，锟斤拷锟斤拷锟皆憋拷锟斤拷锟斤拷锟侥硷拷使锟斤拷Closure Compiler锟斤拷一锟斤拷锟斤拷压锟斤拷锟斤拷
+锟接讹拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟侥硷拷锟斤拷小锟斤拷<br/>
+2. 锟斤拷buildPathList锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷锟侥硷拷锟斤拷每一锟斤拷锟斤拷锟斤拷元锟截讹拷应锟斤拷一锟斤拷package锟斤拷锟斤拷锟斤拷from锟斤拷锟斤拷锟斤拷模锟斤拷锟侥硷拷(.soy)锟斤拷to锟斤拷应锟斤拷锟斤拷锟斤拷锟缴碉拷
+js路锟斤拷锟斤拷锟斤拷锟角碉拷值锟斤拷使锟斤拷通锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟侥硷拷锟斤拷锟斤拷锟斤拷锟斤拷要注锟斤拷锟斤拷锟斤拷模锟斤拷锟侥硷拷锟斤拷js锟侥硷拷锟斤拷锟侥硷拷锟斤拷锟斤拷锟斤拷同锟侥★拷description锟斤拷style目前锟斤拷
+锟角憋拷锟斤拷锟斤拷锟斤拷锟斤拷选锟筋。
 ```
-Step3: node项目中的build.js，若遇到编译错误，都将会显示在cmd窗口中。
+Step3: node锟斤拷目锟叫碉拷build.js锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟襟，讹拷锟斤拷锟斤拷锟斤拷示锟斤拷cmd锟斤拷锟斤拷锟叫★拷
