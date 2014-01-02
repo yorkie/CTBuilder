@@ -8,7 +8,7 @@ lame tool to use Google Closure Template
 {
    "name": "views",
    "version" "0.0.1",
-   "appdir": "./"
+   "appdir": "./",
    "buildMode": "debug|release",
    "buildPathList": [
       {
